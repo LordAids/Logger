@@ -40,5 +40,10 @@ namespace Logger
             Exception ex = new Exception("Ошибка для показа debugE");
             log.Debug("Была нажата кнопка дебага и вот код ошибки: ", ex);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            log.DebugFormat("Дебаг формат так сказать: ", sender);
+        }
     }
 }

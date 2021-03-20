@@ -35,7 +35,13 @@ namespace Logger
 
         public void DebugFormat(string message, params object[] args)
         {
-            throw new NotImplementedException();
+            string dateDay = DateTime.Today.ToShortDateString();
+
+            if (!Directory.Exists(logFolder + @"\" + dateDay)) Directory.CreateDirectory(logFolder + @"\" + dateDay);
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Debug.txt", true);
+            sw.WriteLine(dateNow + " : " + message + args);
+            sw.Close();
         }
 
         public void Error(string message)
