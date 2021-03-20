@@ -1,0 +1,10 @@
+C:\Users\lord_aids\source\repos\Logger\Logger\bin\Debug\Logger.exe.config
+C:\Users\lord_aids\source\repos\Logger\Logger\bin\Debug\Logger.exe
+C:\Users\lord_aids\source\repos\Logger\Logger\bin\Debug\Logger.pdb
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.csprojAssemblyReference.cache
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.Form1.resources
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.Properties.Resources.resources
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.csproj.GenerateResource.cache
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.exe
+C:\Users\lord_aids\source\repos\Logger\Logger\obj\Debug\Logger.pdb
