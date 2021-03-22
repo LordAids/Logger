@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{5112CAA4-8A4F-40A9-A1B8-8F5D71E1C95B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidzLab5", "..\TidzLab5\TidzLab5\TidzLab5.csproj", "{E495043B-1C1C-47EE-A993-91CCCC69E434}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{5112CAA4-8A4F-40A9-A1B8-8F5D71E1C95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5112CAA4-8A4F-40A9-A1B8-8F5D71E1C95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5112CAA4-8A4F-40A9-A1B8-8F5D71E1C95B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E495043B-1C1C-47EE-A993-91CCCC69E434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E495043B-1C1C-47EE-A993-91CCCC69E434}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E495043B-1C1C-47EE-A993-91CCCC69E434}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E495043B-1C1C-47EE-A993-91CCCC69E434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
