@@ -39,6 +39,10 @@ namespace Logger
             this.errorEOnlyButoon = new System.Windows.Forms.Button();
             this.fatalButton = new System.Windows.Forms.Button();
             this.fatalEButton = new System.Windows.Forms.Button();
+            this.InfoButton = new System.Windows.Forms.Button();
+            this.InfoEButton = new System.Windows.Forms.Button();
+            this.InfoArgsButton = new System.Windows.Forms.Button();
+            this.SystemInfoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // debugButton
@@ -140,11 +144,55 @@ namespace Logger
             this.fatalEButton.UseVisualStyleBackColor = true;
             this.fatalEButton.Click += new System.EventHandler(this.fatalEButton_Click);
             // 
+            // InfoButton
+            // 
+            this.InfoButton.Location = new System.Drawing.Point(394, 33);
+            this.InfoButton.Name = "InfoButton";
+            this.InfoButton.Size = new System.Drawing.Size(75, 23);
+            this.InfoButton.TabIndex = 10;
+            this.InfoButton.Text = "Info";
+            this.InfoButton.UseVisualStyleBackColor = true;
+            this.InfoButton.Click += new System.EventHandler(this.InfoButton_Click);
+            // 
+            // InfoEButton
+            // 
+            this.InfoEButton.Location = new System.Drawing.Point(394, 78);
+            this.InfoEButton.Name = "InfoEButton";
+            this.InfoEButton.Size = new System.Drawing.Size(75, 23);
+            this.InfoEButton.TabIndex = 11;
+            this.InfoEButton.Text = "InfoE";
+            this.InfoEButton.UseVisualStyleBackColor = true;
+            this.InfoEButton.Click += new System.EventHandler(this.InfoEButton_Click);
+            // 
+            // InfoArgsButton
+            // 
+            this.InfoArgsButton.Location = new System.Drawing.Point(394, 118);
+            this.InfoArgsButton.Name = "InfoArgsButton";
+            this.InfoArgsButton.Size = new System.Drawing.Size(75, 23);
+            this.InfoArgsButton.TabIndex = 12;
+            this.InfoArgsButton.Text = "InfoArgs";
+            this.InfoArgsButton.UseVisualStyleBackColor = true;
+            this.InfoArgsButton.Click += new System.EventHandler(this.InfoArgsButton_Click);
+            // 
+            // SystemInfoButton
+            // 
+            this.SystemInfoButton.Location = new System.Drawing.Point(394, 162);
+            this.SystemInfoButton.Name = "SystemInfoButton";
+            this.SystemInfoButton.Size = new System.Drawing.Size(124, 23);
+            this.SystemInfoButton.TabIndex = 13;
+            this.SystemInfoButton.Text = "SystemInfo";
+            this.SystemInfoButton.UseVisualStyleBackColor = true;
+            this.SystemInfoButton.Click += new System.EventHandler(this.SystemInfoButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SystemInfoButton);
+            this.Controls.Add(this.InfoArgsButton);
+            this.Controls.Add(this.InfoEButton);
+            this.Controls.Add(this.InfoButton);
             this.Controls.Add(this.fatalEButton);
             this.Controls.Add(this.fatalButton);
             this.Controls.Add(this.errorEOnlyButoon);
@@ -175,6 +223,10 @@ namespace Logger
         private System.Windows.Forms.Button errorEOnlyButoon;
         private System.Windows.Forms.Button fatalButton;
         private System.Windows.Forms.Button fatalEButton;
+        private System.Windows.Forms.Button InfoButton;
+        private System.Windows.Forms.Button InfoEButton;
+        private System.Windows.Forms.Button InfoArgsButton;
+        private System.Windows.Forms.Button SystemInfoButton;
     }
 }
 

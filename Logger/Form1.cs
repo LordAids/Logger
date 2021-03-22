@@ -85,5 +85,27 @@ namespace Logger
             Exception ex = new Exception("Код фатальной ошибки");
             log.Fatal("Произошла фатальная ошибка. Код:", ex );
         }
+
+        private void InfoButton_Click(object sender, EventArgs e)
+        {
+            log.Info("Произошло что-то");
+        }
+
+        private void InfoEButton_Click(object sender, EventArgs e)
+        {
+            Exception ex = new Exception("Код ошибки");
+            log.Info("Произошло действие с ошибкой. Код: ", ex);
+        }
+
+        private void InfoArgsButton_Click(object sender, EventArgs e)
+        {
+            log.Info("Произошло действие с объектом: ", sender);
+        }
+
+        private void SystemInfoButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<object, object> properties = new Dictionary<object, object>();
+            log.SystemInfo("Система: ", properties);
+        }
     }
 }

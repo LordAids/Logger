@@ -108,22 +108,38 @@ namespace Logger
 
         public void Info(string message)
         {
-            throw new NotImplementedException();
+            string dateNow = DateTime.Now.ToString();
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
+            sw.WriteLine(dateNow + " : " + message);
+            sw.Close();
         }
 
         public void Info(string message, Exception e)
         {
-            throw new NotImplementedException();
+            string dateNow = DateTime.Now.ToString();
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
+            sw.WriteLine(dateNow + " : " + message + e.ToString());
+            sw.Close();
         }
 
         public void Info(string message, params object[] args)
         {
-            throw new NotImplementedException();
+            string dateNow = DateTime.Now.ToString();
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
+            sw.WriteLine(dateNow + " : " + message + args);
+            sw.Close();
         }
 
         public void SystemInfo(string message, Dictionary<object, object> properties = null)
         {
-            throw new NotImplementedException();
+            string dateNow = DateTime.Now.ToString();
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\SystemInfo.txt", true);
+            sw.WriteLine(dateNow + " : " + message + properties.ToString());
+            sw.Close();
         }
 
         public void Warning(string message)
