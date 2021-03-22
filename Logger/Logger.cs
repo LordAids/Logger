@@ -78,21 +78,13 @@ namespace Logger
         {
             string dateNow = DateTime.Now.ToString();
             string Path = logFolder + @"\" + dateDay + @"\ErrorUnique.txt";
-            message += " " + e.ToString()+"*"; //переопределение записи в log
-
-            StreamReader errorsData = new StreamReader(Path); //Читам все ошибки, что уже сегодня записаны
-            var data = new List<string>();
-            
-            data.Add(errorsData.ReadToEnd()); //Записываем ошибки в список
-            string[] errors = data[0].Split(new char[] { '*' }); //Разделяем весь файл на отдельные ошибки
-            errorsData.Close();
-
-            if (Path.IndexOf(message) == -1) //проверка на наличие ошибки в файле
+            message += " " + e.ToString() + "*";
+            if (Path.IndexOf(message)==-1)
             {
-                StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
+                StreamWriter sw = new StreamWriter(Path, true);
                 sw.WriteLine(message);
                 sw.Close();
-            }        
+            }
 
         }
 

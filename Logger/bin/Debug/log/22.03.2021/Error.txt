@@ -65,3 +65,26 @@
 Произошла ошибка.Код:  System.Exception: Ошибка для показа ErrorE*
 22.03.2021 15:10:02 : System.Exception: Ошибка для показа ErrorEOnly
 Код ошибки: System.Exception: Ошибка для показа ErrorEOnly*
+22.03.2021 16:34:01 : System.Exception: Ошибка для показа ErrorEOnly
+Код ошибки: System.Exception: Ошибка для показа ErrorEOnly*
+22.03.2021 16:34:01 : Произошла ошибка. Код: System.Exception: Ошибка для показа ErrorE
+Произошла ошибка.Код:  System.Exception: Ошибка для показа ErrorE*
+22.03.2021 16:34:02 : Произошла ошибка
+Произошла ошибка System.Exception*
+22.03.2021 16:34:11 : System.Exception: Ошибка для показа ErrorEOnly
+Код ошибки: System.Exception: Ошибка для показа ErrorEOnly*
+22.03.2021 16:34:14 : Произошла ошибка. Код: System.Exception: Ошибка для показа ErrorE
+Произошла ошибка.Код:  System.Exception: Ошибка для показа ErrorE*
+22.03.2021 16:34:18 : Произошла ошибка
+Произошла ошибка System.Exception*
+22.03.2021 16:34:23 : System.Exception: Ошибка для показа ErrorEOnly
+Код ошибки: System.Exception: Ошибка для показа ErrorEOnly*
+22.03.2021 16:36:21 : System.Exception: Ошибка для показа ErrorEOnly
+Код ошибки: System.Exception: Ошибка для показа ErrorEOnly*
+22.03.2021 16:36:25 : Произошла ошибка. Код: System.Exception: Ошибка для показа ErrorE
+Произошла ошибка.Код:  System.Exception: Ошибка для показа ErrorE*
+22.03.2021 16:36:29 : Произошла ошибка
+Произошла ошибка System.Exception*
+22.03.2021 16:40:22 : System.Exception: Ошибка для показа ErrorEOnly
+22.03.2021 16:40:25 : Произошла ошибка. Код: System.Exception: Ошибка для показа ErrorE
+22.03.2021 16:40:28 : Произошла ошибка. Код: System.Exception: Ошибка для показа ErrorE
