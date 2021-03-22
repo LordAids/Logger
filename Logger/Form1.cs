@@ -107,5 +107,19 @@ namespace Logger
             Dictionary<object, object> properties = new Dictionary<object, object>();
             log.SystemInfo("Система: ", properties);
         }
+
+        private void warningButton_Click(object sender, EventArgs e)
+        {
+            log.Warning("Предупреждающее предупреждение");
+            log.WarningUnique("Предупреждающее предупреждение");
+        }
+
+        private void warningEButton_Click(object sender, EventArgs e)
+        {
+            Exception ex = new Exception("Код ошибки");
+            log.Warning("Предупреждение об ошибке. Код: ", ex);
+            log.WarningUnique("Предупреждение об ошибке. Код: " + ex.ToString());
+
+        }
     }
 }

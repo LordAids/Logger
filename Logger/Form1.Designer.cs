@@ -43,6 +43,8 @@ namespace Logger
             this.InfoEButton = new System.Windows.Forms.Button();
             this.InfoArgsButton = new System.Windows.Forms.Button();
             this.SystemInfoButton = new System.Windows.Forms.Button();
+            this.warningButton = new System.Windows.Forms.Button();
+            this.warningEButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // debugButton
@@ -184,11 +186,33 @@ namespace Logger
             this.SystemInfoButton.UseVisualStyleBackColor = true;
             this.SystemInfoButton.Click += new System.EventHandler(this.SystemInfoButton_Click);
             // 
+            // warningButton
+            // 
+            this.warningButton.Location = new System.Drawing.Point(557, 33);
+            this.warningButton.Name = "warningButton";
+            this.warningButton.Size = new System.Drawing.Size(75, 23);
+            this.warningButton.TabIndex = 14;
+            this.warningButton.Text = "Warning";
+            this.warningButton.UseVisualStyleBackColor = true;
+            this.warningButton.Click += new System.EventHandler(this.warningButton_Click);
+            // 
+            // warningEButton
+            // 
+            this.warningEButton.Location = new System.Drawing.Point(557, 78);
+            this.warningEButton.Name = "warningEButton";
+            this.warningEButton.Size = new System.Drawing.Size(95, 23);
+            this.warningEButton.TabIndex = 15;
+            this.warningEButton.Text = "WarningE";
+            this.warningEButton.UseVisualStyleBackColor = true;
+            this.warningEButton.Click += new System.EventHandler(this.warningEButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.warningEButton);
+            this.Controls.Add(this.warningButton);
             this.Controls.Add(this.SystemInfoButton);
             this.Controls.Add(this.InfoArgsButton);
             this.Controls.Add(this.InfoEButton);
@@ -227,6 +251,8 @@ namespace Logger
         private System.Windows.Forms.Button InfoEButton;
         private System.Windows.Forms.Button InfoArgsButton;
         private System.Windows.Forms.Button SystemInfoButton;
+        private System.Windows.Forms.Button warningButton;
+        private System.Windows.Forms.Button warningEButton;
     }
 }
 

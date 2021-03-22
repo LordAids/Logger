@@ -76,15 +76,25 @@ namespace Logger
 
         public void ErrorUnique(string message, Exception e)
         {
-            string dateNow = DateTime.Now.ToString();
             string Path = logFolder + @"\" + dateDay + @"\ErrorUnique.txt";
-            message += " " + e.ToString() + "*";
-            if (Path.IndexOf(message)==-1)
+            if (File.Exists(Path)) 
+             {
+                string Errors = File.ReadAllText(Path);
+                message += " " + e.ToString();
+
+                if (!Errors.Contains(message)) //проверка наличия записи об ошибке
+                {
+                    StreamWriter sw = new StreamWriter(Path, true);
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            } else
             {
                 StreamWriter sw = new StreamWriter(Path, true);
                 sw.WriteLine(message);
                 sw.Close();
             }
+            
 
         }
 
@@ -144,17 +154,41 @@ namespace Logger
 
         public void Warning(string message)
         {
-            throw new NotImplementedException();
+            string dateNow = DateTime.Now.ToString();
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Warning.txt", true);
+            sw.WriteLine(dateNow + " : " + message);
+            sw.Close();
         }
 
         public void Warning(string message, Exception e)
         {
-            throw new NotImplementedException();
+            string dateNow = DateTime.Now.ToString();
+
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Warning.txt", true);
+            sw.WriteLine(dateNow + " : " + message + e.ToString());
+            sw.Close();
         }
 
         public void WarningUnique(string message)
         {
-            throw new NotImplementedException();
+            string Path = logFolder + @"\" + dateDay + @"\WarningUnique.txt";
+            
+            if (File.Exists(Path))
+            {
+                string Warnings = File.ReadAllText(Path);
+                if (Warnings.IndexOf(message) == -1) //проверка наличия записи об ошибке
+                {
+                    StreamWriter sw = new StreamWriter(Path, true);
+                    sw.WriteLine(message);
+                    sw.Close();
+                }
+            } else
+            {
+                StreamWriter sw = new StreamWriter(Path, true);
+                sw.WriteLine(message);
+                sw.Close();
+            }
         }
     }
 }
