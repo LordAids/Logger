@@ -1,0 +1,3 @@
+Произошла ошибка System.Exception*
+Произошла ошибка.Код:  System.Exception: Ошибка для показа ErrorE*
+Код ошибки: System.Exception: Ошибка для показа ErrorEOnly*
