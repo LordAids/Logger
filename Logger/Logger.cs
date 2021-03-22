@@ -9,7 +9,7 @@ namespace Logger
 {
     public class Logger : ILog
     {
-        
+
         string dateDay = DateTime.Today.ToShortDateString();
         string logFolder = Environment.CurrentDirectory + @"\log";
 
@@ -21,6 +21,7 @@ namespace Logger
         
         public void Debug(string message)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder+ @"\" + dateDay+@"\Debug.txt", true);
@@ -30,6 +31,7 @@ namespace Logger
 
         public void Debug(string message, Exception e)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Debug.txt", true);
@@ -39,6 +41,7 @@ namespace Logger
 
         public void DebugFormat(string message, params object[] args)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Debug.txt", true);
@@ -48,6 +51,7 @@ namespace Logger
 
         public void Error(string message)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
@@ -57,6 +61,7 @@ namespace Logger
 
         public void Error(string message, Exception e)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
@@ -66,6 +71,7 @@ namespace Logger
 
         public void Error(Exception ex)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
@@ -76,6 +82,7 @@ namespace Logger
 
         public void ErrorUnique(string message, Exception e)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string Path = logFolder + @"\" + dateDay + @"\ErrorUnique.txt";
             if (File.Exists(Path)) 
              {
@@ -100,6 +107,7 @@ namespace Logger
 
         public void Fatal(string message)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Fatal.txt", true);
@@ -109,6 +117,7 @@ namespace Logger
 
         public void Fatal(string message, Exception e)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Fatal.txt", true);
@@ -118,6 +127,7 @@ namespace Logger
 
         public void Info(string message)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
@@ -127,6 +137,7 @@ namespace Logger
 
         public void Info(string message, Exception e)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
@@ -136,6 +147,7 @@ namespace Logger
 
         public void Info(string message, params object[] args)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
@@ -145,6 +157,7 @@ namespace Logger
 
         public void SystemInfo(string message, Dictionary<object, object> properties = null)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\SystemInfo.txt", true);
@@ -154,6 +167,7 @@ namespace Logger
 
         public void Warning(string message)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Warning.txt", true);
@@ -163,6 +177,7 @@ namespace Logger
 
         public void Warning(string message, Exception e)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
             StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Warning.txt", true);
@@ -172,6 +187,7 @@ namespace Logger
 
         public void WarningUnique(string message)
         {
+            string dateDay = DateTime.Today.ToShortDateString();
             string Path = logFolder + @"\" + dateDay + @"\WarningUnique.txt";
             
             if (File.Exists(Path))
