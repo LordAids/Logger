@@ -10,71 +10,71 @@ namespace Logger
     public class Logger : ILog
     {
 
-        string dateDay = DateTime.Today.ToShortDateString();
+        
         string logFolder = Environment.CurrentDirectory + @"\log";
 
-        public Logger()
+        
+
+        private string getDate()
         {
-            if (!Directory.Exists(logFolder + @"\" + dateDay)) Directory.CreateDirectory(logFolder + @"\" + dateDay);
+            if (!Directory.Exists(logFolder + @"\" + DateTime.Today.ToShortDateString())) Directory.CreateDirectory(logFolder + @"\" + DateTime.Today.ToShortDateString());
+            return DateTime.Today.ToShortDateString();
+
         }
+
+       
         
         
         public void Debug(string message)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder+ @"\" + dateDay+@"\Debug.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder+ @"\" + getDate()+@"\Debug.txt", true);
             sw.WriteLine(dateNow + " : " + message);
             sw.Close();
         }
 
         public void Debug(string message, Exception e)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Debug.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Debug.txt", true);
             sw.WriteLine(dateNow + " : " + message + e.ToString());
             sw.Close();
         }
 
         public void DebugFormat(string message, params object[] args)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Debug.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Debug.txt", true);
             sw.WriteLine(dateNow + " : " + message + args);
             sw.Close();
         }
 
         public void Error(string message)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Error.txt", true);
             sw.WriteLine(dateNow + " : " + message);
             sw.Close();
         }
 
         public void Error(string message, Exception e)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Error.txt", true);
             sw.WriteLine(dateNow + " : " + message + e.ToString());
             sw.Close();
         }
 
         public void Error(Exception ex)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Error.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Error.txt", true);
             sw.WriteLine(dateNow + " : " + ex.ToString());
             sw.Close();
 
@@ -82,8 +82,7 @@ namespace Logger
 
         public void ErrorUnique(string message, Exception e)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
-            string Path = logFolder + @"\" + dateDay + @"\ErrorUnique.txt";
+            string Path = logFolder + @"\" + getDate() + @"\ErrorUnique.txt";
             if (File.Exists(Path)) 
              {
                 string Errors = File.ReadAllText(Path);
@@ -107,88 +106,81 @@ namespace Logger
 
         public void Fatal(string message)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Fatal.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Fatal.txt", true);
             sw.WriteLine(dateNow + " : " + message);
             sw.Close();
         }
 
         public void Fatal(string message, Exception e)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Fatal.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Fatal.txt", true);
             sw.WriteLine(dateNow + " : " + message + e.ToString());
             sw.Close();
         }
 
         public void Info(string message)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Info.txt", true);
             sw.WriteLine(dateNow + " : " + message);
             sw.Close();
         }
 
         public void Info(string message, Exception e)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Info.txt", true);
             sw.WriteLine(dateNow + " : " + message + e.ToString());
             sw.Close();
         }
 
         public void Info(string message, params object[] args)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Info.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Info.txt", true);
             sw.WriteLine(dateNow + " : " + message + args);
             sw.Close();
         }
 
         public void SystemInfo(string message, Dictionary<object, object> properties = null)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\SystemInfo.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\SystemInfo.txt", true);
             sw.WriteLine(dateNow + " : " + message + properties.ToString());
             sw.Close();
         }
 
         public void Warning(string message)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
+            
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Warning.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Warning.txt", true);
             sw.WriteLine(dateNow + " : " + message);
             sw.Close();
         }
 
         public void Warning(string message, Exception e)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
+            
             string dateNow = DateTime.Now.ToString();
 
-            StreamWriter sw = new StreamWriter(logFolder + @"\" + dateDay + @"\Warning.txt", true);
+            StreamWriter sw = new StreamWriter(logFolder + @"\" + getDate() + @"\Warning.txt", true);
             sw.WriteLine(dateNow + " : " + message + e.ToString());
             sw.Close();
         }
 
         public void WarningUnique(string message)
         {
-            string dateDay = DateTime.Today.ToShortDateString();
-            string Path = logFolder + @"\" + dateDay + @"\WarningUnique.txt";
+             string Path = logFolder + @"\" + getDate() + @"\WarningUnique.txt";
             
             if (File.Exists(Path))
             {
